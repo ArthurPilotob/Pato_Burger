@@ -11,7 +11,7 @@ typedef struct {
 } ingrediente;
 
 typedef struct {
-    ingrediente itens;
+    tp_pilha burger;
     char nome[30];
     float preco;
     int id;
@@ -61,3 +61,4 @@ void exibirCardapio(hamburguer cardapio[], ingrediente estoque[]) {
         }
     }
 }
+
