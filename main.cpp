@@ -4,10 +4,14 @@
 #include "PILHA_H"
 #include "FILA_H"
 
+//retirar receita das funções e implementar a fila
+//seprarar e modularizar os ingredientes/hamburgueres
+
 typedef struct {
     char nome[30];
     int quantidade;
     float precoCompra;
+    int id;
 } ingrediente;
 
 typedef struct {
@@ -45,9 +49,77 @@ void inicializarEstoque(ingrediente estoque[]) {
     strcpy(estoque[13].nome, "Frango");             estoque[13].quantidade = 25; estoque[13].precoCompra = 3.50;
     
 }
-
-void inicializarCardapio (hamburguer cardapio[], ingrediente estoque[]){
-    ////fazer
+   void inicializarCardapio (hamburguer cardapio[], ingrediente estoque[]){
+    strcpy(cardapio[0].nome, "Bit and Bacon");
+    cardapio[0].preco = 22.00;
+    cardapio[0].itens = 
+    cardapio[0].receita = {
+    cardapio[0].id = 01;
+    cardapio[0].numItens = 5  
+    
+    strcpy(cardapio[1].nome, "DuckCheese");
+    cardapio[1].preco = 22.00;
+    cardapio[1].itens = 
+    cardapio[1].receita = {
+    cardapio[1].id = 02;
+    cardapio[1].numItens =  5
+    
+    strcpy(cardapio[2].nome, "Quackteirão");
+    cardapio[2].preco = 25.00;
+    cardapio[2].itens = 
+    cardapio[2].receita = {
+    cardapio[2].id = 03;
+    cardapio[2].numItens =  6
+    
+    strcpy(cardapio[3].nome, "Big Pato");
+    cardapio[3].preco = 30.00;
+    cardapio[3].itens = 
+    cardapio[3].receita = {
+    cardapio[3].id = 04;
+    cardapio[3].numItens =  9
+    
+    strcpy(cardapio[4].nome, "Donald");
+    cardapio[4].preco = 32.00;
+    cardapio[4].itens = 
+    cardapio[4].receita = {
+    cardapio[4].id = 05;
+    cardapio[4].numItens =  9
+    
+    strcpy(cardapio[5].nome, "Patolino");
+    cardapio[5].preco = 32.00;
+    cardapio[5].itens = 
+    cardapio[5].receita = {
+    cardapio[5].id = 06;
+    cardapio[5].numItens =  7
+    
+    strcpy(cardapio[6].nome, "Duckling");
+    cardapio[6].preco = 20.00;
+    cardapio[6].itens = 
+    cardapio[6].receita = {
+    cardapio[6].id = 07;
+    cardapio[6].numItens =  5
+    
+    strcpy(cardapio[7].nome, "PatOnion");
+    cardapio[7].preco = 37.00;
+    cardapio[7].itens = 
+    cardapio[7].receita = {
+    cardapio[7].id = 08;
+    cardapio[7].numItens =  8
+    
+    strcpy(cardapio[8].nome, "TioPatinhas");
+    cardapio[8].preco = 40.00;
+    cardapio[8].itens = 
+    cardapio[8].receita = {
+    cardapio[8].id = 09;
+    cardapio[8].numItens =  
+    
+    strcpy(cardapio[9].nome, "DuX-Tudo");
+    cardapio[9].preco = 46.00;
+    cardapio[9].itens = 
+    cardapio[9].receita = {
+    cardapio[9].id = 10;
+    cardapio[9].numItens =  18
+    
 }
 
 void exibirCardapio(hamburguer cardapio[], ingrediente estoque[]) {
@@ -62,3 +134,6 @@ void exibirCardapio(hamburguer cardapio[], ingrediente estoque[]) {
     }
 }
 
+hamburguer big_pato;
+
+push(&big_pato.burger, receita[i
