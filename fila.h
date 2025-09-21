@@ -23,7 +23,7 @@ int filaVazia(tp_fila *f) {
 
 int proximo (int pos) {
     if(pos == MAX-1) return 0;
-    return pos++;
+    return ++pos;
 }
 
 int filaCheia(tp_fila *f) {
@@ -40,7 +40,7 @@ int insereFila (tp_fila *f, tp_item e) {
 
 int removeFila (tp_fila *f, tp_item *e) {
     if(filaVazia(f)) return 0;
-    f->ini = proximo(f->fim);
+    f->ini = proximo(f->ini);
     *e = f->item[f->ini];
     return 1;
 }
