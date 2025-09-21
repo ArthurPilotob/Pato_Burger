@@ -1,52 +1,48 @@
 #ifndef PILHA_H
 #define PILHA_H
 #include <stdio.h>
+
 #define MAX 100
-
-typedef int 
-    tp_item;
-
+typedef int tp_item;
 
 typedef struct {
     int topo;
     tp_item item[MAX];
 } tp_pilha;
 
-void inicializaPilha (tp_pilha *p) {
-    p -> topo = -1;
+static inline void inicializaPilha(tp_pilha *p) {
+    p->topo = -1;
 }
 
-int pilhaVazia (tp_pilha *p) {
-    if (p -> topo == -1) return 1;
-    return 0;
+static inline int pilhaVazia(tp_pilha *p) {
+    return (p->topo == -1);
 }
 
-int pilhaCheia (tp_pilha *p) {
-    if (p -> topo == MAX - 1) return 1;
-    return 0;
+static inline int pilhaCheia(tp_pilha *p) {
+    return (p->topo == MAX - 1);
 }
 
-int push (tp_pilha *p, tp_item e) {
-    if (pilhaCheia(p) == 1) return 0;
+static inline int push(tp_pilha *p, tp_item e) {
+    if (pilhaCheia(p)) return 0;
     p->topo++;
     p->item[p->topo] = e;
     return 1;
 }
 
-int pop (tp_pilha *p, tp_item *e) {
-    if (pilhaVazia(p) == 1) return 0;
-    *e=p->item[p->topo];
+static inline int pop(tp_pilha *p, tp_item *e) {
+    if (pilhaVazia(p)) return 0;
+    *e = p->item[p->topo];
     p->topo--;
     return 1;
 }
 
-int top (tp_pilha *p, tp_item *e) {
-    if (pilhaVazia(p) == 1) return 0;
-    *e=p->item[p->topo];
+static inline int top(tp_pilha *p, tp_item *e) {
+    if (pilhaVazia(p)) return 0;
+    *e = p->item[p->topo];
     return 1;
 }
 
-void imprimePilha(tp_pilha p) {
+static inline void imprimePilha(tp_pilha p) {
     tp_item e;
     printf("\n");
     while (!pilhaVazia(&p)) {
@@ -55,8 +51,8 @@ void imprimePilha(tp_pilha p) {
     }
 }
 
-int alturaPilha (tp_pilha *p) {
-    return p-> topo+1;
+static inline int alturaPilha(tp_pilha *p) {
+    return p->topo + 1;
 }
 
 #endif
